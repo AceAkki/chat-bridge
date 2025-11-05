@@ -1,12 +1,30 @@
 import { Main } from "./classMain.js";
 
 document.addEventListener("DOMContentLoaded", ()=> {
-    render(document.querySelector("#root"));
+    renderHeader(document.querySelector("#header"));
+    setHeaderHeight(header)
+    renderSection(document.querySelector("#root"));
     const classMain = new Main({platformSelector:"#platformSelect", selectSelector:"#prefixSelect", prefixSelector:"#prefixInput", mobileSelector:"#mobileNumber", messageSelector:"#customMSG", btnsParent:".buttons" });
     classMain.initMain();
 })
 
-function render(container) {
+function setHeaderHeight(header) {
+  let headerHeight = header.getBoundingClientRect().height;
+  const root = document.documentElement;
+  root.style.setProperty("--header-height", `${headerHeight + 20}px`);
+  console.log(headerHeight);
+}
+
+function renderHeader(header){
+    header.innerHTML =
+    `
+    <div>
+     <h1> Chat-Bridge </h1>
+    </div>
+    `
+}
+
+function renderSection(container) {
     container.innerHTML =
     `
     <div class="main-container">

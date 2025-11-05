@@ -11,6 +11,8 @@
 
   --black-clr: #1c1e21;
   --white-clr: #ffffff;
+
+  --header-height: 0;
 }
 
 * {
@@ -19,7 +21,7 @@
 }
 
 body {
-  background: var(--bg-clr);
+  background: var(--black-clr);
   font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -33,10 +35,13 @@ body {
 
 header {
   min-height: 15vh;
-  background: var(--black-clr);
+  background: var(--primary-clr);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 input[type="number"] {
@@ -44,11 +49,14 @@ input[type="number"] {
 }
 
 header h1 {
-  color: var(--primary-clr);
+  color: var(--black-clr);
   text-align: center;
-  font-weight: 700;
-  font-size: 2.1rem;
+  font-weight: 900;
+  font-size: 2.8rem;
+  font-family: "Montserrat", sans-serif;
   padding: 1rem 2rem;
+  text-decoration: underline;
+  text-underline-offset: 10px;
 }
 
 section {
@@ -58,7 +66,7 @@ section {
 }
 
 .main-container {
-  margin: 5rem 1rem;
+  margin: var(--header-height) 1rem;
   padding: 1rem;
   background: rgba(220, 248, 198, 0.7);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
