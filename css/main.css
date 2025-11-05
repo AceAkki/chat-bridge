@@ -21,7 +21,7 @@
 }
 
 body {
-  background: var(--black-clr);
+  background: var(--bg-clr);
   font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -153,4 +153,5 @@ option {
     width: 30vw;
   }
 }
+
 
